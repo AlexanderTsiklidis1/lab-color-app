@@ -37,9 +37,22 @@ function App() {
 
 
   return (
-    <>
-     
-    </>
+    <div className="App">
+      <h1>Color Battle</h1>
+      <div className="players">
+        <div className={`player ${currentPlayer === 1 ? 'active' : ''}`}>
+          <h2>Player 1</h2>
+          <p>Hit Points: {player1HP}</p>
+          <button onClick={attack}>Attack</button>
+        </div>
+        <div className={`player ${currentPlayer === 2 ? 'active' : ''}`}>
+          <h2>Player 2</h2>
+          <p>Hit Points: {player2HP}</p>
+          <button onClick={attack}>Attack</button>
+        </div>
+      </div>
+      <p className="message">{message}</p>
+    </div>
   )
 }
 
