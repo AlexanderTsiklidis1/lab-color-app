@@ -34,6 +34,13 @@ function App() {
       setMessage('Player 2 has lost!');
     }
   }, [player1HP, player2HP]);
+  
+  const resetGame = () => {
+    setPlayer1HP(100);
+    setPlayer2HP(100);
+    setMessage('');
+    setCurrentPlayer(1);
+  };
 
 
   return (
@@ -52,6 +59,9 @@ function App() {
         </div>
       </div>
       <p className="message">{message}</p>
+      <button className="reset-button" onClick={resetGame}>
+        Reset Game
+      </button>
     </div>
   )
 }

@@ -53,3 +53,18 @@ button:hover {
 h1 {
   color: green
 }
+
+.reset-button {
+  padding: 10px 20px;
+  background-color: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.reset-button:hover {
+  background-color:darkgreen;
+}
