@@ -4,4 +4,4 @@ In this lab my partner Addis and I built a color app where two players can attac
 
 Note: I had to recreate github repository but lab was previously completed so ideal collab commits may not be represented in this repo
 
-deployed link on netlify (https://storied-crisp-3d5df0.netlify.app)
+deployed link on netlify (https://deluxe-fenglisu-b44f25.netlify.app)
