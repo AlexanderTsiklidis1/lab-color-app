@@ -43,9 +43,63 @@ function App() {
   };
 
 
+  useEffect(() => {
+    animateCharacters('.message');
+  },);
+
+  function animateCharacters(selector) {
+    const element = document.querySelector(selector);
+    if (element) {
+      const spanElements = element.querySelectorAll('span');
+      spanElements.forEach((spanElement) => {
+        const randomDuration = 0.2 + Math.random() * 1;
+        spanElement.classList.remove('animate');
+        spanElement.style.setProperty('--duration', randomDuration + 's');
+      });
+      setInitialRandomColor(spanElements);
+    }
+  }
+
+  function setInitialRandomColor(spanElements) {
+    spanElements.forEach((spanElement) => {
+      const randomColor = getRandomColor();
+      spanElement.style.setProperty('--initial-color', randomColor);
+    });
+  }
+
+  function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+
+    function random($min, $max) {
+      $rand: random() * ($max - $min) + $min;
+      return round($rand);
+  }
+
+
+  }
+
+
   return (
     <div className="App">
-      <h1>Color Battle</h1>
+      <h1 className='message'>
+      <span className='animate'>C</span>
+      <span className='animate'>o</span>
+      <span className='animate'>l</span>
+      <span className='animate'>o</span>
+      <span className='animate'>r</span>
+      <span className='animate'>&nbsp;</span>
+      <span className='animate'>B</span>
+      <span className='animate'>a</span>
+      <span className='animate'>t</span>
+      <span className='animate'>t</span>
+      <span className='animate'>l</span>
+      <span className='animate'>e</span></h1>
+
       <div className="players">
         <div className={`player ${currentPlayer === 1 ? 'active' : ''}`}>
           <h2>Player 1</h2>
