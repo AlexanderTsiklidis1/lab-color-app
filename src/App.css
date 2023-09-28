@@ -7,17 +7,25 @@
 .players-container {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: flex;
   height: 400px; 
+  width : 800rem;
 }
 
 .player {
   margin: 10px;
-  padding: 20px;
+  padding-top: 120px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
   border: 2px solid grey;
   transition: border 0.3s ease-in-out;
-  flex: 1;
+  flex: 100px;
+  height: 400px;
+  width: 500px;
   background-color: white; 
+  display: inline-block;
+  text-align: center;
 }
 
 .player:nth-child(1) {
@@ -40,6 +48,7 @@ button {
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s ease-in-out;
+  
 }
 
 button:hover {
@@ -50,10 +59,30 @@ button:hover {
   font-size: 18px;
   margin-top: 20px;
 }
+
 h1 {
-  color: green
+  display: inline-block;
+  animation: colorChange 5s infinite;
+  -webkit-animation: colorChange 5s infinite;
 }
 
+@keyframes colorChange {
+  0%, 100% {
+      color: rgb(random(0, 255), random(0, 255), random(0, 255));
+  }
+  25% {
+      color: rgb(random(0, 255), random(0, 255), random(0, 255));
+  }
+  50% {
+      color: rgb(random(0, 255), random(0, 255), random(0, 255));
+  }
+  75% {
+      color: rgb(random(0, 255), random(0, 255), random(0, 255));
+  }
+}
+
+
+In this example, we use
 .reset-button {
   padding: 10px 20px;
   background-color: green;
